@@ -7,7 +7,7 @@ services:
     dockerCommand: ./docker/web_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
     numInstances: 1
-    healthCheckPath: /admin
+    # healthCheckPath: /admin
     envVars:
       - fromGroup: app-settings
       - key: REDIS_URL
