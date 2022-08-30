@@ -66,11 +66,13 @@ services:
   - type: redis
     name: redis
     plan: free
+    region: frankfurt
     ipAllowList: []
 
 databases:
   - name: postgres
     plan: free
+    region: frankfurt
     postgresMajorVersion: 14
 
 
