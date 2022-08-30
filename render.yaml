@@ -2,7 +2,6 @@ services:
   - type: web
     name: web
     env: docker
-    region: frankfurt
     plan: starter
     dockerCommand: ./docker/web_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
@@ -23,7 +22,6 @@ services:
   - type: worker
     name: celery
     env: docker
-    region: frankfurt
     plan: starter
     dockerCommand: ./docker/celery_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
@@ -43,7 +41,6 @@ services:
   - type: worker
     name: beats
     env: docker
-    region: frankfurt
     plan: starter
     dockerCommand: ./docker/celery_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
@@ -63,13 +60,11 @@ services:
   - type: redis
     name: redis
     plan: free
-    region: frankfurt
     ipAllowList: []
 
 databases:
   - name: postgres
     plan: free
-    region: frankfurt
     postgresMajorVersion: 14
 
 
