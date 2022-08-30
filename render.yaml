@@ -4,7 +4,6 @@ services:
     env: docker
     region: frankfurt
     plan: starter
-    branch: master
     dockerCommand: ./docker/web_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
     numInstances: 1
@@ -26,7 +25,6 @@ services:
     env: docker
     region: frankfurt
     plan: starter
-    branch: master
     dockerCommand: ./docker/celery_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
     numInstances: 1
@@ -47,7 +45,6 @@ services:
     env: docker
     region: frankfurt
     plan: starter
-    branch: master
     dockerCommand: ./docker/celery_entrypoint.sh
     dockerfilePath: ./docker/production.Dockerfile
     numInstances: 1
